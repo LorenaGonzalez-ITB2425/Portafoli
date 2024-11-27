@@ -4,6 +4,6 @@ function showSection(sectionId) {
         section.classList.remove('active');
     });
     const activeSection = document.getElementById(sectionId);
-    activeSection.classList.add('active'); 
+    activeSection.classList.add('active');
 }
 
