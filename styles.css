@@ -2,12 +2,13 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background: linear-gradient(to bottom, #6a11cb, #002f7e);
+    flex-direction: column; /* Coloca el contenido y footer en columna */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    background: linear-gradient(to top, rgba(40, 0, 142, 0.89), rgba(79, 0, 143, 0.89),rgba(40, 0, 142, 0.89));
     color: #fff;
-    justify-content: space-between;
+    justify-content: space-between; /* Esto hace que el contenido se estire para llenar el espacio disponible */
 }
+
 
 header {
     display: flex;
@@ -29,10 +30,9 @@ nav a {
     padding: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
-
     position: relative;
     text-decoration: none;
-    color: rgb(138, 62, 62);
+    color: white;
 }
 
 nav a::after {
@@ -69,7 +69,84 @@ nav a:hover::after {
     }
 }
 
-.contenedor-autor,
+.contenedor-autor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.seccion_autor1 {
+    background: #c3bbcc;
+    border-radius: 10px;
+    padding: 20px;
+    height: 200px;
+    width: 250px;
+    font-family: Georgia, serif;
+    color: #000000;
+    text-align: center;
+}
+
+
+.seccion_autor2 {
+    background: #c3bbcc;
+    color: #000000;
+    border-radius: 10px;
+    padding: 20px;
+    height: 450px;
+    width: 400px;
+}
+
+.seccion_autor1 h3 {
+    text-wrap: balance;
+}
+
+.seccion_autor1 p {
+    color: black;
+    font-size: 15px;
+    text-decoration: #ffcc00 solid;
+}
+
+.seccion_autor1 a {
+    color: black;
+    font-size: 15px;
+    text-decoration: #ffcc00 solid;
+}
+
+#subtitulo {
+    font-family: "Comic Sans MS", cursive;
+    font-style: italic;
+}
+
+
+
+#icono {
+    margin-top: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 25px;
+}
+
+#dylan {
+    clear: left;
+    vertical-align: top;
+    line-height: 25px;
+    font-size: 12px;
+    font-style: italic
+
+}
+
+
+
+
+
+
+
+
+
+
 .contenedor-proyectos {
     display: flex;
     justify-content: center;
@@ -77,59 +154,27 @@ nav a:hover::after {
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px;
-    text-wrap: balance;
 }
 
-
-
-.seccion_autor,
-.proyecto {
-    background-color: #000000;
+.seccion_proyectos1 {
+   background-color: #000000;
     color: white;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
     cursor: pointer;
-    height: 250px;
-    width: 300px;
+    height: 300px;
+    width: 100px;
 }
 
-.seccion_autor:hover,
-.proyecto:hover {
-    background-color: #ffffff;
-    color: #000000;
+.seccion_proyectos2 {
+   background-color: #000000;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    height: 100px;
+    width: 400px;
 }
-
-
-
-
-.proyecto-uno {
-    height: 200px;
-    width: 250px;
-    text-align: left;
-}
-
-
-.seccion_autor_1 {
-    height: 200px;
-    width: 700px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -175,23 +220,40 @@ nav a:hover::after {
     background-color: #333;
 }
 
+
 footer {
-    position: relative;
-    width: 100%;
+    margin-top: auto; /* Este es el cambio clave para asegurar que el footer se mueva al fondo */
     background-color: #000000;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: auto;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-.footer .social-icon a {
+.social-icon {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+    display: flex; /* Alinea los elementos horizontalmente */
+    justify-content: center; /* Centra los iconos */
+    gap: 15px; /* Espaciado entre los iconos */
+}
+
+.social-icon .icon {
+    display: inline-block;
+}
+
+.social-icon a {
     color: white;
-    font-size: 32px;
-    transition: transform 0.3s ease;
+    font-size: 24px;
     text-decoration: none;
 }
 
+.social-icon a:hover {
+    color: #ffcc00;
+}
 
+.footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
